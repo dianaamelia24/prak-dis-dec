@@ -1,0 +1,28 @@
+import strawberry
+from strawberry.asgi import GraphQL
+
+
+@strawberry.type
+class Book:
+    title: str
+    author: str
+
+
+@strawberry.type
+class Query:
+    @strawberry.field
+    def books(self) -> list[Book]:
+        return [
+            Book(
+                title="Perahu Kertas ",
+                author="Dee Lestari",
+            ),
+            Book(
+                title="Dilan 1990",
+                author="Pidi Baiq",
+            ),
+        ]
+
+
+schema = strawberry.Schema(query=Query)
+app = GraphQL(schema)
