@@ -106,6 +106,8 @@ Setelah server dipilih, sinkronisasi dijalankan agar waktu komputer
 disesuaikan dengan waktu server. NetTime melakukan komunikasi dengan server,
 menghitung perbedaan waktu, lalu mengoreksi waktu lokal.
 
+**Sumber hasil:** aplikasi NetTime, bukan file Python pada repository.
+
 ![Instalasi NetTime](images/01-Install%20Nettime.png)
 
 ### 4.2 Menjalankan Program Vector Clock
@@ -119,6 +121,8 @@ python .\vclocks.py
 Program membuat tiga proses, yaitu P0, P1, dan P2. P0 melakukan event lokal dan
 mengirim pesan kepada P1. P2 melakukan event lokal, kemudian P1 mengirim pesan
 kepada P2. Setiap pesan membawa salinan vector clock pengirim.
+
+**File penghasil output:** [vclocks.py](vclocks.py).
 
 ![Output vector clock](images/02-vclockspy-output.png)
 
@@ -145,6 +149,9 @@ python .\main_vector.py
 
 Dokumentasi tugas pembuatan modul terdapat pada gambar berikut.
 
+**File kode yang didokumentasikan:** [vector_clock.py](modul_3.2/vector_clock.py)
+dan [main_vector.py](modul_3.2/main_vector.py).
+
 ![Dokumentasi modul vector clock](images/10-Modul-3.2.png)
 
 ### 4.4 Menjalankan Program Multithreaded
@@ -162,7 +169,12 @@ program utama menunggu seluruh thread selesai.
 Program dijalankan lebih dari satu kali dan hasilnya didokumentasikan untuk
 menunjukkan bahwa urutan output dapat berbeda.
 
+**File penghasil output:** [multithreads-example.py](multithreads-example.py).
+
 ![Output multithreaded pertama](images/03-multithreads-output.png)
+
+**File penghasil output:** [multithreads-example.py](multithreads-example.py),
+dijalankan pada percobaan yang berbeda.
 
 ![Output multithreaded kedua](images/09-multithreads-output2.png)
 
@@ -183,12 +195,19 @@ python .\race-conditions-02.py
 Kedua thread mencoba menarik Rp80 dari saldo awal Rp100. Bagian pemeriksaan
 saldo dan pengurangan saldo dibandingkan pada kedua program.
 
+**File penghasil output:** [race-conditions-01.py](race-conditions-01.py).
+
 ![Output data race tanpa lock](images/04-race-conditions-01.png)
+
+**File penghasil output:** [race-conditions-02.py](race-conditions-02.py).
 
 ![Output program dengan lock](images/05-race-conditions-2.png)
 
 Visualisasi interleaving data race dibuat untuk menunjukkan dua thread yang
 membaca saldo yang sama sebelum melakukan pengurangan.
+
+**Sumber visualisasi:** dibuat secara manual berdasarkan alur eksekusi
+[race-conditions-01.py](race-conditions-01.py).
 
 ![Visualisasi data race](images/12-Gambar-Race-Conditions.jpeg)
 
@@ -214,11 +233,19 @@ Program kedua melepaskan lock pertama sebelum mengambil lock berikutnya dan
 menggunakan timeout pada `acquire`. Dengan demikian, thread tidak menahan satu
 lock sambil menunggu lock lain.
 
+**File penghasil output:** [deadlock-01.py](deadlock-01.py).
+
 ![Output deadlock](images/06-deadlock-01.png)
+
+**File penghasil output:** [deadlock-02.py](deadlock-02.py).
 
 ![Output pencegahan deadlock](images/07-deadlock-2.png)
 
 Visualisasi hubungan tunggu antar-thread didokumentasikan pada gambar berikut.
+
+**Sumber visualisasi:** dibuat secara manual berdasarkan alur penguncian pada
+[deadlock-01.py](deadlock-01.py) dan mekanisme pencegahan pada
+[deadlock-02.py](deadlock-02.py).
 
 ![Visualisasi deadlock](images/13-Visualisasi-Deadlock.jpeg)
 
@@ -232,6 +259,8 @@ python .\raft.py
 
 Program membuat tiga node dan menjalankan 20 langkah simulasi. Pada setiap
 langkah, program mencetak state, term, dan panjang log setiap node.
+
+**File penghasil output:** [raft.py](raft.py).
 
 ![Output simulasi Raft](images/08-raftpy.png)
 
@@ -254,10 +283,18 @@ python .\main_raft.py
 
 Dokumentasi pembuatan modul Raft ditampilkan pada gambar berikut.
 
+**File kode yang didokumentasikan:** [raft_node.py](modul_3.4/raft_node.py)
+dan [main_raft.py](modul_3.4/main_raft.py).
+
 ![Dokumentasi modul Raft](images/11-Modul-3.4.png)
 
 Visualisasi pemilihan leader dibuat berdasarkan perubahan state follower,
 candidate, dan leader.
+
+**Sumber visualisasi:** dibuat secara manual berdasarkan perubahan state pada
+[raft.py](raft.py), serta class pada
+[raft_node.py](modul_3.4/raft_node.py) yang digunakan oleh
+[main_raft.py](modul_3.4/main_raft.py).
 
 ![Visualisasi algoritma Raft](images/14-Visualisasi-Algoritma-Raft.jpeg)
 
