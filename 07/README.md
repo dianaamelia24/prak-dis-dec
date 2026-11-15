@@ -62,7 +62,7 @@ Keduanya dapat menjalankan image dengan format OCI yang kompatibel.
 
 ## 4. Langkah Pengerjaan
 
-## 4.0 Tugas 0
+## Tugas 0
 
 1. Contoh Vendor atau Komunitas SaaS, PaaS, dan IaaS
 
@@ -151,7 +151,7 @@ Scalability – memungkinkan kapasitas komputasi ditambah atau dikurangi sesuai 
 Pada model IaaS, provider menyediakan infrastruktur seperti server, penyimpanan, dan jaringan. Pengguna memiliki kendali lebih besar untuk mengatur sistem operasi, middleware, aplikasi, serta konfigurasi lingkungan komputasi.
 
 3. Visualisasi Arsitektur XaaS
-   (images/Visualisasi Arsitektur XaaS.png)
+   ![Visualisasi Arsitektur XaaS](<Visualisasi Arsitektur XaaS.png>)
 
 ### 4.1 Memeriksa dan Menyiapkan `uv`
 
