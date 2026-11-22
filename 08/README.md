@@ -65,7 +65,7 @@ py -m uv add
 
 Hasil pemeriksaan menunjukkan bahwa Python 3.14.4 telah tersedia pada komputer dan dapat digunakan untuk membuat proyek praktikum.
 
-![Pemeriksaan dan penggunaan Python 3.14.4](images/1-menggunakan python 3.14.4.png)
+![Pemeriksaan dan penggunaan Python 3.14.4](images/1-menggunakan%20python%203.14.4.png)
 
 ### 4.2 Membuat Virtual Environment
 
@@ -78,7 +78,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 Perintah `Set-ExecutionPolicy` memungkinkan skrip virtual environment dijalankan pada pengguna Windows saat ini. Setelah aktivasi, prompt PowerShell menampilkan nama lingkungan `.venv`, yang menunjukkan bahwa virtual environment telah aktif.
 
-![Pembuatan dan aktivasi virtual environment](images/2-membuat dan aktifkan virtual environment.png)
+![Pembuatan dan aktivasi virtual environment](images/2-membuat%20dan%20aktifkan%20virtual%20environment.png)
 
 ### 4.3 Menginstal FastAPI dan SQLModel
 
@@ -90,7 +90,7 @@ uv pip install "fastapi[standard]" sqlmodel
 
 Paket tersebut membawa FastAPI beserta paket pendukungnya, seperti Uvicorn untuk server, Pydantic untuk validasi data, dan SQLAlchemy sebagai pengelola database. Setelah proses selesai, paket dapat digunakan oleh aplikasi pada folder `08`.
 
-![Proses instalasi FastAPI dan SQLModel](images/3-menginstal paket fastapi dan sqlmodel.png)
+![Proses instalasi FastAPI dan SQLModel](images/3-menginstal%20paket%20fastapi%20dan%20sqlmodel.png)
 
 ### 4.4 Membuat Database dan Tabel SDM
 
@@ -112,7 +112,7 @@ CREATE TABLE sdm (
 
 Kolom `id` digunakan sebagai kunci utama, `npp` menyimpan nomor pokok pegawai, dan `nama` menyimpan nama karyawan. Tiga data awal dimasukkan ke tabel menggunakan perintah `INSERT INTO sdm` dan ditampilkan menggunakan `SELECT * FROM sdm`. Hasilnya memuat tiga karyawan dengan NPP `112233`, `223344`, dan `334455`.
 
-![Pembuatan database dan tabel SDM](images/4-membuat database dan tabel sdm di sqlite.png)
+![Pembuatan database dan tabel SDM](images/4-membuat%20database%20dan%20tabel%20sdm%20di%20sqlite.png)
 
 ### 4.5 Membuat Aplikasi dan Model Data
 
@@ -148,7 +148,7 @@ python -m uvicorn service:app --reload
 
 Uvicorn menjalankan objek `app` pada modul `service.py`. Opsi `--reload` membuat server memuat ulang aplikasi secara otomatis ketika file kode berubah. Hasil pemeriksaan menunjukkan server berjalan pada alamat `http://127.0.0.1:8000` dengan proses startup dan shutdown yang berhasil.
 
-![Menjalankan server FastAPI](images/5-menjalankan server fastapi.png)
+![Menjalankan server FastAPI](images/5-menjalankan%20server%20fastapi.png)
 
 ### 4.7 Menguji Endpoint SDM
 
@@ -166,9 +166,9 @@ curl.exe http://localhost:8000/sdm/
 
 Respons dari `curl.exe` memiliki struktur JSON yang sama dengan hasil pada browser.
 
-![Hasil endpoint SDM pada browser](images/6-menjalankan localhost 8000.png)
+![Hasil endpoint SDM pada browser](images/6-menjalankan%20localhost%208000.png)
 
-![Pengujian endpoint SDM menggunakan curl.exe](images/7-menguji endpoint menggunakan curl.exe.png)
+![Pengujian endpoint SDM menggunakan curl.exe](images/7-menguji%20endpoint%20menggunakan%20curl.exe.png)
 
 ### 4.8 Membuat dan Mengisi Tabel Aset Server
 
@@ -192,9 +192,9 @@ session.add_all(data_server)
 session.commit()
 ```
 
-![Pembuatan tabel aset_server](images/8-membuat tabel baru aset-server (tugas).png)
+![Pembuatan tabel aset_server](images/8-membuat%20tabel%20baru%20aset-server%20%28tugas%29.png)
 
-![Menjalankan skrip isi_data.py](images/9-menjalankan python isi_data.py.png)
+![Menjalankan skrip isi_data.py](images/9-menjalankan%20python%20isi_data.py.png)
 
 Lima data aset server yang dimasukkan adalah:
 
@@ -218,11 +218,11 @@ Hasil pengujian dengan `curl.exe` menunjukkan lima objek server dalam format JSO
 
 Endpoint tersebut juga dapat dibuka melalui browser dan menampilkan daftar aset server dalam format JSON yang sama.
 
-![Menjalankan ulang server untuk endpoint aset-server](images/10-menjalankan server fastapi menggunakan endpoint.png)
+![Menjalankan ulang server untuk endpoint aset-server](images/10-menjalankan%20server%20fastapi%20menggunakan%20endpoint.png)
 
-![Pengujian endpoint aset-server menggunakan curl.exe](images/11-menampilkan hasil endpoint menggunakan curl.exe.png)
+![Pengujian endpoint aset-server menggunakan curl.exe](images/11-menampilkan%20hasil%20endpoint%20menggunakan%20curl.exe.png)
 
-![Hasil endpoint aset-server pada browser](images/12-menjalankan localhost 8000 aset-server.png)
+![Hasil endpoint aset-server pada browser](images/12-menjalankan%20localhost%208000%20aset-server.png)
 
 ## 5. Hasil Praktikum
 
