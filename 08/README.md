@@ -206,10 +206,6 @@ Lima data aset server yang dimasukkan adalah:
 | srv-app-01   |          16 | RK-02    | true  |           71.8 |
 | srv-log-01   |           8 | RK-03    | true  |           18.4 |
 
-Isi tabel dapat dilihat kembali melalui SQLite3 CLI menggunakan perintah `SELECT * FROM aset_server`.
-
-![Hasil data tabel aset_server](images/9-menjalankan python isi_data.py.png)
-
 ### 4.9 Menjalankan Endpoint Aset Server
 
 Server FastAPI dijalankan kembali dan endpoint aset server diuji pada alamat:
